@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test:ci": "jest"
   },
   "keywords": [],
   "author": "",
