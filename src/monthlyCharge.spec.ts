@@ -22,12 +22,12 @@ describe("monthlyCharge", () => {
         const plan = {
             id: 1,
             customerId: 1,
-            monthlyPriceInCents: 359,
+            monthlyPriceInCents: 2000,
         };
 
         const finalValue = monthlyCharge("2022-04", plan, users);
 
-        expect(finalValue).toBeCloseTo(13283, -2);
+        expect(finalValue).toBeCloseTo(74000, -2);
     });
 
     it("Test 2", () => {
@@ -51,12 +51,12 @@ describe("monthlyCharge", () => {
         const plan = {
             id: 1,
             customerId: 1,
-            monthlyPriceInCents: 359,
+            monthlyPriceInCents: 2000,
         };
 
         const finalValue = monthlyCharge("2022-03", plan, users);
 
-        expect(finalValue).toBeCloseTo(11129, -2);
+        expect(finalValue).toBeCloseTo(62000, -2);
     });
 
     it("Test 3", () => {
@@ -73,7 +73,7 @@ describe("monthlyCharge", () => {
         const plan = {
             id: 1,
             customerId: 1,
-            monthlyPriceInCents: 359,
+            monthlyPriceInCents: 2000,
         };
 
         const finalValue = monthlyCharge("2022-03", plan, users);
@@ -95,11 +95,11 @@ describe("monthlyCharge", () => {
         const plan = {
             id: 1,
             customerId: 1,
-            monthlyPriceInCents: 359,
+            monthlyPriceInCents: 2000,
         };
 
         const finalValue = monthlyCharge("2022-03", plan, users);
 
-        expect(finalValue).toBeCloseTo(6462, -2);
+        expect(finalValue).toBeCloseTo(36000, -2);
     });
 });
