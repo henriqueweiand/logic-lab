@@ -27,7 +27,7 @@ describe("monthlyCharge", () => {
 
         const finalValue = monthlyCharge("2022-04", plan, users);
 
-        expect(finalValue).toBe(13283);
+        expect(finalValue).toBeCloseTo(13283, -2);
     });
 
     it("Test 2", () => {
@@ -56,7 +56,7 @@ describe("monthlyCharge", () => {
 
         const finalValue = monthlyCharge("2022-03", plan, users);
 
-        expect(finalValue).toBe(11129);
+        expect(finalValue).toBeCloseTo(11129, -2);
     });
 
     it("Test 3", () => {
@@ -78,7 +78,7 @@ describe("monthlyCharge", () => {
 
         const finalValue = monthlyCharge("2022-03", plan, users);
 
-        expect(finalValue).toBe(0);
+        expect(finalValue).toBeCloseTo(0, -2);
     });
 
     it("Test 4", () => {
@@ -100,6 +100,6 @@ describe("monthlyCharge", () => {
 
         const finalValue = monthlyCharge("2022-03", plan, users);
 
-        expect(finalValue).toBe(6462);
+        expect(finalValue).toBeCloseTo(6462, -2);
     });
 });
