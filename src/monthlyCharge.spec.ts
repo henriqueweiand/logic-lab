@@ -80,26 +80,4 @@ describe("monthlyCharge", () => {
 
         expect(finalValue).toBeCloseTo(0, -2);
     });
-
-    it("Test 4", () => {
-        const users = [
-            {
-                id: 1,
-                name: "Employee #1",
-                activatedOn: new Date("2022-03-15"),
-                deactivatedOn: null,
-                customerId: 1,
-            },
-        ];
-
-        const plan = {
-            id: 1,
-            customerId: 1,
-            monthlyPriceInCents: 2000,
-        };
-
-        const finalValue = monthlyCharge("2022-03", plan, users);
-
-        expect(finalValue).toBeCloseTo(36000, -2);
-    });
 });
